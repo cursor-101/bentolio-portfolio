@@ -1,0 +1,331 @@
+/* Bentolio Portfolio Template CSS */
+@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@300;500;700&display=swap');
+
+:root {
+  --background-color: #F9F1F0;
+  --card-color: #FADCD9;
+  --accent-color: #F8AFA6;
+  --text-color: #000000;
+  --white: #FFFFFF;
+  --border-radius: 20px;
+  --grid-gap: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.bentolio {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: var(--grid-gap);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.accent-card {
+  background-color: var(--accent-color);
+}
+
+/* HEADER */
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 42px 24px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 88px;
+}
+
+.nav a {
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+/* SLOGAN/INTRO */
+.slogan {
+  grid-column: 1 / 6;
+  grid-row: 2 / 4;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slogan h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1em;
+  margin-top: auto;
+  max-width: 475px;
+}
+
+.flower-icon {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  width: 119px;
+  height: 119px;
+}
+
+/* PORTRAIT */
+.portrait {
+  grid-column: 6 / 9;
+  grid-row: 2 / 4;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background-color: var(--card-color);
+  min-height: 476px;
+}
+
+.portrait img {
+  position: absolute;
+  top: -19px;
+  left: -25px;
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  object-fit: cover;
+}
+
+/* WORK */
+.work {
+  grid-column: 9 / 13;
+  grid-row: 2 / 6;
+  display: flex;
+  flex-direction: column;
+  padding: 34px 24px;
+}
+
+.work-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.work-item:not(:last-child) {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 40px;
+}
+
+.work-item h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.work-image {
+  width: 100%;
+  height: 269px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  background-color: var(--white);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ABOUT */
+.about {
+  grid-column: 1 / 5;
+  grid-row: 5 / 7;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+}
+
+.circle-icon {
+  width: 38px;
+  height: 38px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 85px;
+}
+
+.about p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25em;
+  max-width: 296px;
+}
+
+/* CONTACT */
+.contact {
+  grid-column: 5 / 9;
+  grid-row: 5 / 7;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
+}
+
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 189px;
+}
+
+.contact-top p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.15em;
+}
+
+.arrow-circle {
+  width: 38px;
+  height: 38px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h2 {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 1.21em;
+}
+
+/* SOCIALS */
+.socials {
+  grid-column: 9 / 13;
+  grid-row: 6 / 7;
+  padding: 45px 56px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* SVG Icons */
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .bentolio {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  
+  .slogan {
+    grid-column: 1 / 9;
+    grid-row: 2;
+  }
+  
+  .portrait {
+    grid-column: 1 / 5;
+    grid-row: 3;
+  }
+  
+  .work {
+    grid-column: 5 / 9;
+    grid-row: 3 / 5;
+  }
+  
+  .about {
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+  
+  .contact {
+    grid-column: 1 / 5;
+    grid-row: 5;
+  }
+  
+  .socials {
+    grid-column: 5 / 9;
+    grid-row: 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentolio {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav {
+    gap: 40px;
+  }
+  
+  .slogan, .portrait, .work, .about, .contact, .socials {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  
+  .slogan h1 {
+    font-size: 40px;
+  }
+  
+  .contact h2 {
+    font-size: 40px;
+  }
+}
